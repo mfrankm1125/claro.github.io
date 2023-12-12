@@ -59,27 +59,63 @@
       display: none;
     }
 
-   
-   #loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff;
-    z-index: 99999;
+
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff;
+      z-index: 99999;
     }
 
     .load-circle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 150px;
-    height: 100px;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 150px;
+      height: 100px;
+    }
+
+    .loader {
+      width:28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      margin: 3px;
+    }
+
+    .loader::after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
   </style>
 </head>
 
@@ -88,11 +124,13 @@
   <div id="loading" style="display: block;">
     <div class="load-circle" style="text-align: center;">
       <div style="text-align: center;">
-        <img src="images/logo.png" style="width: 30px;" class="img-fluid"
-          style="text-align: center;">
+        <img src="images/logo.png" style="width: 40px;" class="img-fluid" style="text-align: center;">
       </div>
-      <div style=" ">        
-          <span class="">Cargando...</span>      
+      <div style="margin-top: 10px; ">
+        
+        <span class="loader"></span>
+        <span class="loader"></span>
+        <span class="loader"></span>
       </div>
 
     </div>
@@ -291,7 +329,7 @@
                     <img class="img-fluid" src="images/all-products/small/2.jpg" alt="Product">
                     <strong>Ipsums Dolors Untra </strong>
                     <small>Color : white | Size : L</small>
-                    
+
                     <span class="product-price text-danger">$20.99</span>
                   </a>
                 </div>
@@ -346,7 +384,8 @@
                       <a data-toggle="tooltip" data-placement="top" title="Add To Cart"
                         class="btn btn-theme-round btn-sm" href="#"><i class="icofont icofont-shopping-cart"></i></a>
                       <a data-toggle="tooltip" data-placement="top" title="View Detail"
-                        class="btn btn-theme-round btn-sm" href="shop-detail.html"><i class="icofont icofont-search-alt-2"></i></a>
+                        class="btn btn-theme-round btn-sm" href="shop-detail.html"><i
+                          class="icofont icofont-search-alt-2"></i></a>
                     </div>
                     <h4 class="card-title"><a href="#">Ipsums Dolors Untra</a></h4>
                     <h5>
@@ -378,7 +417,8 @@
                       <a data-toggle="tooltip" data-placement="top" title="Add To Cart"
                         class="btn btn-theme-round btn-sm" href="#"><i class="icofont icofont-shopping-cart"></i></a>
                       <a data-toggle="tooltip" data-placement="top" title="View Detail"
-                        class="btn btn-theme-round btn-sm" href="shop-detail.html"><i class="icofont icofont-search-alt-2"></i></a>
+                        class="btn btn-theme-round btn-sm" href="shop-detail.html"><i
+                          class="icofont icofont-search-alt-2"></i></a>
                     </div>
                     <h4 class="card-title"><a href="#">Ipsums Dolors Untra</a></h4>
                     <h5>
@@ -1302,7 +1342,7 @@
         document.documentElement.scrollTop = 0;
       }
 
-      $("#loading").css("display","none");
+      $("#loading").css("display", "none");
 
     });
 
