@@ -402,6 +402,9 @@
                       </div>
                     </div>
 
+                 
+                   
+
 
 
                   </div>
@@ -413,6 +416,7 @@
                   <span class="badge badge-dark   "
                     style="font-size: 0.8rem;font-weight: 500;padding-bottom: 9px;">Envio rapido</span>
                   <br>
+                 
                   <br>
                   <div class="  " style="width: 157px;">
                     <span>Cantidad: </span>
@@ -421,8 +425,9 @@
                       <option value="2">2</option>
                     </select>
                   </div>
-
-                  <br>
+                  
+                  <a href="javascript:void(0)" onclick="verDisponibilidad()" class="mt-1 mb-1  " style="display: block;" ><i class="fa  fa-info-circle"> </i> <span id="txtStock">Consultar disponibilidad  </span></a>
+               
                   <button type="button" class="btn btn-theme-round btn-lg">
                     <i class="icofont icofont-shopping-cart"></i> Agregar al carrito
                   </button>
@@ -928,6 +933,18 @@
 
     function modal2() {
       $("#modal2").modal("show");
+    }
+
+
+    function verDisponibilidad(){
+      let t=$("#txtStock");
+      t.html("Consultando...");
+
+      setTimeout(function(){
+        t.html("Disponible 10 unidades  <p class='mb-1 pb-1'> Actualizado: 17/02/2023 08:01</p> ");
+      },1000)
+
+      
     }
   </script>
 
