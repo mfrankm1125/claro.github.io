@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from askbootstrap.com/preview/osahan-fashion/order-status.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 17:54:12 GMT -->
+<!-- Mirrored from askbootstrap.com/preview/osahan-fashion/cart_checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 17:54:12 GMT -->
 
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120909275-1"
-    type="c7df4f6db19926af2824857f-text/javascript"></script>
-  <script type="c7df4f6db19926af2824857f-text/javascript">
+    type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
+  <script type="1046a36e9bdc1e2bbb99f5bb-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -36,127 +36,40 @@
 
   <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
   <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.css">
-  <style>
-    
-/*Icon progressbar*/
-#progressbar {
-    margin-bottom: 10px;
-    overflow: hidden;
-    color: #455A64;
-    padding-left: 0px;
-    margin-top: 0px;
-} 
 
-#progressbar li {
-    list-style-type: none;
-    font-size: 13px;
-    width: 25%;
-    float: left;
-    position: relative;
-    font-weight: 400;
-}
 
-#progressbar .step0:before {
-    font-family: FontAwesome;
-    content: "\f10c";
-    color: #fff;
-}
-
-#progressbar li:before {
-    width: 40px;
-    height: 40px;
-    line-height: 45px;
-    display: block;
-    font-size: 20px;
-    background: #C5CAE9;
-    border-radius: 50%;
-    margin: auto;
-    padding: 0px;
-}
-
-/*ProgressBar connectors*/
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 12px;
-    background: #C5CAE9;
-    position: absolute;
-    left: 0;
-    top: 16px;
-    z-index: -1;
-}
-
-#progressbar li:last-child:after {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: absolute;
-    left: -50%;
-}
-
-#progressbar li:nth-child(2):after, #progressbar li:nth-child(3):after {
-    left: -50%;
-}
-
-#progressbar li:first-child:after {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: absolute;
-    left: 50%;
-}
-
-#progressbar li:last-child:after {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#progressbar li:first-child:after {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-/*Color number of the step and the connector before it*/
-#progressbar li.active:before, #progressbar li.active:after {
-    background: #651FFF;
-}
-
-#progressbar li.active:before {
-    font-family: FontAwesome;
-    content: "\f00c";
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 2px;
-}
-
-.icon-content { 
-    padding-bottom: 20px;
-}
-
-@media screen and (max-width: 992px) {
-    .icon-content {
-        width: fit-content;
-    }
-}
-.card.card-x {
-    z-index: 0;
-    background-color: #ECEFF1;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-}
-
-.top {
-    padding-top: 0px;
-    padding-left: 13% !important;
-    padding-right: 13% !important;
-}
-  </style>
 </head>
 
 <body>
+  <script src="https://checkout.culqi.com/js/v4"></script>
+  <script>
+    Culqi.publicKey = 'pk_test_f8e2981b9eaef61f';
+  </script>
+
+<script>
+
+
+
+  function culqi() {
+    if (Culqi.token) {  // ¡Objeto Token creado exitosamente!
+      const token = Culqi.token.id;
+      console.log('Se ha creado un Token: ', token);
+      //En esta linea de codigo debemos enviar el "Culqi.token.id"
+      //hacia tu servidor con Ajax
+    } else if (Culqi.order) {  // ¡Objeto Order creado exitosamente!
+      const order = Culqi.order;
+      console.log('Se ha creado el objeto Order: ', order);
+
+    } else {
+      // Mostramos JSON de objeto error en consola
+      console.log('Error : ',Culqi.error);
+    }
+  };
+
+
+
+</script>
+
   <div class="modal fade login-modal-main" id="bd-example-modal">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -402,139 +315,109 @@
   <section class="shopping_cart_page">
     <div class="container">
       <div class="row">
-        
-        <div class="col-lg-12 col-md-8 col-sm-7">
+        <div class="col-lg-12 col-md-12">
+          <div class="checkout-step mb-40">
+            <ul>
+              <li>
+                <a href="cart_delivery.html">
+                  <div class="step">
+                    <div class="line"></div>
+                    <div class="circle">1</div>
+                  </div>
+                  <span>Shipping</span>
+                </a>
+              </li>
+              <li>
+                <a href="cart_order.html">
+                  <div class="step">
+                    <div class="line"></div>
+                    <div class="circle">2</div>
+                  </div>
+                  <span>Order Overview</span>
+                </a>
+              </li>
+              <li class="active">
+                <a href="cart_checkout.html">
+                  <div class="step">
+                    <div class="line"></div>
+                    <div class="circle">3</div>
+                  </div>
+                  <span>Payment</span>
+                </a>
+              </li>
+              <li>
+                <a href="cart_done.html">
+                  <div class="step">
+                    <div class="line"></div>
+                    <div class="circle">4</div>
+                  </div>
+                  <span>Order Complete</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8 mx-auto">
           <div class="widget">
-            <div class="section-header">
-              <h5 class="heading-design-h5">
-                Estado de orden
-              </h5>
+            <div class="section-header section-header-center text-center">
+              <h3 class="heading-design-center-h3">
+                Seleccione metodo de pago
+              </h3>
             </div>
-            <div class="status-main">
+            <form class="col-lg-8 col-md-8 mx-auto">
+              <div class="payment-menthod text-center">
+                <ul>
+                  <li><a class="active" href="#"><i class="icofont icofont-paypal-alt"></i></a>
+                  </li>
+                  <li><a href="#"><i class="icofont icofont-visa-alt"></i></a>
+                  </li>
+                  <li><a href="#"><i class="icofont icofont-mastercard-alt"></i></a>
+                  </li>
+                  <li><a href="#"><i class="icofont icofont-google-wallet-alt-1"></i></a>
+                  </li>
+                  <li><a href="#"><i class="icofont icofont-american-express-alt"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Número tarjeta </label>
+                <input class="form-control border-form-control" value placeholder="0000 0000 0000 0000" type="text">
+              </div>
               <div class="row">
-                <div class="container px-1 px-md-4 py-0 mx-auto">
-                  <div class="card card-x" >
-                      <div class="row d-flex justify-content-between px-3 top">
-                          <div class="d-flex">
-                              <h5>Nro Orden <span class="text-primary font-weight-bold">#Y34XDHR</span></h5>
-                          </div>
-                          <div class="d-flex flex-column text-sm-right">
-                              <p class="mb-0">Llegada prevista<span>01/12/19</span></p>
-                              <p>USPS <span class="font-weight-bold">234094567242423422898</span></p>
-                          </div>
-                      </div>
-                      <!-- Add class 'active' to progress -->
-                      <div class="row d-flex justify-content-center">
-                          <div class="col-12">
-                          <ul id="progressbar" class="text-center">
-                              <li class="active step0"></li>
-                              <li class="active step0"></li>
-                              <li class=" step0"></li>
-                              <li class="step0"></li>
-                          </ul>
-                          </div>
-                      </div>
-                      <div class="row justify-content-between top">
-                          <div class="row d-flex icon-content">
-                              <img class="icon" src="https://i.imgur.com/9nnc9Et.png">
-                              <div class="d-flex flex-column"  style="justify-content: center;" >
-                                  <p class="font-weight-bold">Procesado</p>
-                              </div>
-                          </div>
-                          <div class="row d-flex icon-content">
-                              <img class="icon" src="https://i.imgur.com/u1AzR7w.png">
-                              <div class="d-flex flex-column" style="justify-content: center;" >
-                                  <p class="font-weight-bold">Enviado</p>
-                              </div>
-                          </div>
-                          <div class="row d-flex icon-content">
-                              <img class="icon" src="https://i.imgur.com/TkPm63y.png">
-                              <div class="d-flex flex-column  " style="justify-content: center;" >
-                                  <p class="font-weight-bold">En ruta</p>
-                              </div>
-                          </div>
-                          <div class="row d-flex icon-content" >
-                              <img class="icon" src="https://i.imgur.com/HdsziHP.png">
-                              <div class="d-flex flex-column" style="justify-content: center;" >
-                                  <p class="font-weight-bold">Recogido</p>
-                              </div>
-                          </div>
-                      </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label class="control-label">Mes</label>
+                    <input class="form-control border-form-control" value placeholder="01" type="text">
                   </div>
-              </div>
-
-              </div>
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                   <hr>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="statustop">
-                    <p><strong>Estado:</strong> En proceso </p>
-                    <p><strong>Fecha de pedido:</strong> 02/02/2023</p>
-                    <p><strong>Número pedido:</strong> #6469 </p>                    
-                   <br>              
-                   </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label class="control-label">Año</label>
+                    <input class="form-control border-form-control" value placeholder="15" type="text">
+                  </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="statustop">                    
-                    <p><strong>Dirección de facturación: </strong> 4894 Burke Street , TARAPOTO SAN MARTIN </p>
-                    <p><strong>Dirección de Envio: </strong> 4894 Burke Street , TARAPOTO SAN MARTIN  </p>
-                    <p><strong>Metodo de pago: </strong> VISA 7889999xxxxxx </p>    
-                    <br>              
-                   </div>
+                <div class="col-sm-3">
                 </div>
-
-
-              </div>        
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <div class="card">
-                    <div class="card-header pt-1 pb-1">
-                      Detalle del pedido
-                    </div>
-                    <div class="card-block padding-none">
-                      <table class="table cart_summary table-responsive pt-1 pb-1 " style="display: table;">
-                        <thead>
-                          <tr>
-                            <th class="cart_product  pt-1 pb-1 text-center">Producto</th>
-                            <th class=" pt-1 pb-1" >Descripcion</th>
-                            <th class=" pt-1 pb-1" >Cantidad</th>
-                            <th class=" pt-1 pb-1" >Unit price</th>
-                            <th class=" pt-1 pb-1" >Total</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr  >
-                            <td class="cart_product pt-1 pb-1"><a href="#"><img class="img-fluid"
-                                  src="images/all-products/small/3.jpg" alt="Product"></a></td>
-                            <td class="cart_description">
-                              <p class="product-name"><a href="#">Celular xx xx  xx  x x x  </a></p>
-                              <small><a href="#">IMEI 99929882882828 </a></small>
-                              
-                            </td>
-                            <td class="availability in-stock">1 UND</td>
-                            <td class="price"><span>S/49.88</span></td>
-                            <td class="price"><span>S/49.88</span></td>
-                          </tr>
-                         
-                        </tbody>
-                        <tfoot>
-                          <tr>
-                            <td colspan="4" class="pt-1 pb-1" >Total products </td>
-                            <td colspan="1" class="pt-1 pb-1 " >S/437.88 </td>
-                          </tr>
-                          <tr>
-                            <td colspan="4" class="pt-1 pb-1"  ><strong>Total</strong></td>
-                            <td colspan="1" class="pt-1 pb-1" ><strong>S/337.88 </strong></td>
-                          </tr>
-                        </tfoot>
-                      </table>
-                    </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label class="control-label">CVV</label>
+                    <input class="form-control border-form-control" value placeholder="135" type="text">
                   </div>
                 </div>
               </div>
-            </div>
+              <hr>
+              <label class="custom-control custom-radio">
+                <input id="radioStacked3" name="radio-stacked" class="custom-control-input" type="radio">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description"><strong>Le gustaría pagar en efectivo en
+                  Entrega?</strong></span>
+              </label>
+              <p>Terminos y condiciones escribir aqui... </p>
+              
+
+              <button type="button" id="btn_pagar" class="btn btn-theme-round btn-lg pull-right">Pagar</button>
+              <a href="cart_done.html" class="btn btn-theme-round btn-lg pull-right">Siguiente</a>
+            </form>
           </div>
         </div>
       </div>
@@ -695,25 +578,66 @@
     </div>
   </section>
 
-  <script src="js/jquery.min.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
-  <script src="js/popper.min.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
-  <script src="plugins/tether/tether.min.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
-  <script src="js/bootstrap.min.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
+  <script src="js/jquery.min.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
+  <script src="js/popper.min.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
+  <script src="plugins/tether/tether.min.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
 
-  <script src="js/custom.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
+  <script src="js/custom.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
 
   <link href="plugins/select2/css/select2.min.css" rel="stylesheet" />
-  <script src="plugins/select2/js/select2.min.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
+  <script src="plugins/select2/js/select2.min.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
 
-  <script src="plugins/owl-carousel/owl.carousel.js" type="c7df4f6db19926af2824857f-text/javascript"></script>
+  <script src="plugins/owl-carousel/owl.carousel.js" type="1046a36e9bdc1e2bbb99f5bb-text/javascript"></script>
   <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="c7df4f6db19926af2824857f-|49" defer></script>
+    data-cf-settings="1046a36e9bdc1e2bbb99f5bb-|49" defer></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-    data-cf-beacon='{"rayId":"822fad2e5d839543","version":"2023.10.0","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+    data-cf-beacon='{"rayId":"822fad24191d9543","version":"2023.10.0","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
     crossorigin="anonymous"></script>
+
+    <script>
+
+      
+
+  const btn_pagar = document.getElementById('btn_pagar');
+
+btn_pagar.addEventListener('click', function (e) {
+    // Abre el formulario con la configuración en Culqi.settings y CulqiOptions
+
+    Culqi.settings({
+    title: 'Culqi Store',
+    currency: 'PEN',  // Este parámetro es requerido para realizar pagos yape
+    amount: 1000,  // Este parámetro es requerido para realizar pagos yape
+    order: 'ord_test_xjmEW4dIyJM9G4cc', // Este parámetro es requerido para realizar pagos con pagoEfectivo, billeteras y Cuotéalo
+    xculqirsaid: 'Inserta aquí el id de tu llave pública RSA',
+    rsapublickey: 'Inserta aquí tu llave pública RSA',
+  });
+
+  Culqi.options({
+    lang: "auto",
+    installments: false, // Habilitar o deshabilitar el campo de cuotas
+    paymentMethods: {
+      tarjeta: true,
+      yape: true,
+      bancaMovil: true,
+      agente: true,
+      billetera: true,
+      cuotealo: true,
+    },
+  });
+
+
+  
+    Culqi.open();
+    e.preventDefault();
+});
+
+
+
+    </script>
 </body>
 
-<!-- Mirrored from askbootstrap.com/preview/osahan-fashion/order-status.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 17:54:12 GMT -->
+<!-- Mirrored from askbootstrap.com/preview/osahan-fashion/cart_checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 17:54:12 GMT -->
 
 </html>
