@@ -771,37 +771,125 @@
               <hr>
               <aside class="sidebar_widget">
                 <div class="widget_title">
-                  <h5 class="heading-design-h5">Precios </h5>
-                </div>
-                <div class="card">
-                  <div class="collapse show">
-                    <div class="card-block">
-                      <ul class="trends">
-                        <li><a>
+                  <h5 class="heading-design-h5" style="margin-bottom: 2.5rem;">Precios </h5>
+                
+                  <style>
+                    .range_container {
+                      display: flex;
+                      flex-direction: column;
+                      width: 80%;
+                      margin: 5% auto;
+                    }
 
-                            <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                              <input type="checkbox" class="custom-control-input">
-                              <span class="custom-control-indicator"></span>
-                              <span class="custom-control-description">$68 a $659 <span
-                                  class="item-numbers">365548</span></span>
-                            </label>
-                          </a>
+                    .sliders_control {
+                      position: relative;
+                      min-height: 10px;
+                    }
 
-                        </li>
-                        <li><a> <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                              <input type="checkbox" class="custom-control-input" checked>
-                              <span class="custom-control-indicator"></span>
-                              <span class="custom-control-description">$660 a $1014 <span
-                                  class="item-numbers">3658</span></span>
-                            </label> </a> </li>
+                    .form_control {
+                      position: relative;
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 24px;
+                      color: #635a5a;
+                    }
 
-                      </ul>
+                    input[type="range"]::-webkit-slider-thumb {
+                      -webkit-appearance: none;
+                      pointer-events: all;
+                      width: 24px;
+                      height: 24px;
+                      background-color: #fff;
+                      border-radius: 50%;
+                      box-shadow: 0 0 0 1px #c6c6c6;
+                      cursor: pointer;
+                    }
+
+                    input[type="range"]::-moz-range-thumb {
+                      -webkit-appearance: none;
+                      pointer-events: all;
+                      width: 24px;
+                      height: 24px;
+                      background-color: #fff;
+                      border-radius: 50%;
+                      box-shadow: 0 0 0 1px #c6c6c6;
+                      cursor: pointer;
+                    }
+
+                    input[type="range"]::-webkit-slider-thumb:hover {
+                      background: #f7f7f7;
+                    }
+
+                    input[type="range"]::-webkit-slider-thumb:active {
+                      box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+                      -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+                    }
+
+                    input[type="number"] {
+                      color: #8a8383;
+                      width: 40px;
+                      height: 14px;
+                      font-size: 14px;
+                      border: none;
+                    }
+
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button {
+                      opacity: 1;
+                    }
+
+                    input[type="range"] {
+                      -webkit-appearance: none;
+                      appearance: none;
+                      height: 3px;
+                      width: 100%;
+                      position: absolute;
+                      background-color: #c6c6c6;
+                      pointer-events: none;
+                    }
+
+                    #fromSlider {
+                      height: 0;
+                      z-index: 1;
+                    }
+
+                    input[type="number"] {
+                      -moz-appearance: textfield;
+                    }
+
+                    /* For modern browsers (Chrome, Safari) */
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                      -webkit-appearance: none;
+                      margin: 0;
+                    }
+                  </style>
+                  <div class="range_container">
+                    <div class="sliders_control">
+                      <input id="fromSlider" type="range" value="10" min="1" max="2000" />
+                      <input id="toSlider" type="range" value="10" min="1" max="2000" />
+                    </div>
+                    <div class="form_control">
+                      <div class="form_control_container">
+                        <span style="font-size: 14px;" >S/<b id="sfromInput"></b></span>
+                        <input class="form_control_container__time__input" type="number" id="fromInput" value="10"
+                          min="0" max="99999" />
+                      </div>
+                      <div class="form_control_container">
+                         <span style="font-size: 14px;" >S/<b id="stoInput"></b></span>
+                        <input class="form_control_container__time__input" type="number" id="toInput" value="150" min="0"
+                          max="99999" />
+                      </div>
                     </div>
                   </div>
+
+
+                </div>
+                 
               </aside>
               <hr>
-             
-            
+
+
             </div>
           </div>
           <hr>
@@ -810,7 +898,7 @@
           </a>
         </div>
         <div class="col-lg-9 col-md-8">
-           
+
           <div class="osahan_products_top_filter row">
             <div class="col-lg-6 col-md-6 tags-action">
               <span>Clothing <a href="#"><i class="icofont icofont-close-line-circled"></i></a></span>
@@ -819,7 +907,7 @@
             </div>
             <div class="col-lg-6 col-md-6 sort-by-btn pull-right">
               <div class="view-mode pull-right">
-                
+
               </div>
               <div class="dropdown pull-right">
                 <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -846,7 +934,7 @@
                 <div class="h-100">
                   <div class="product-item">
                     <span class="badge badge-danger offer-badge">HOT</span>
-                    <div class="product-item-image"> 
+                    <div class="product-item-image">
                       <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
                       <a href="#"><img class="card-img-top img-fluid" src="images/all-products/3.jpg" alt></a>
                     </div>
@@ -866,9 +954,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                         
+
                       </div>
-                       
+
                     </div>
                   </div>
                 </div>
@@ -880,7 +968,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -902,9 +990,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -917,7 +1005,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -939,9 +1027,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -954,7 +1042,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -976,9 +1064,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -991,7 +1079,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -1013,9 +1101,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -1028,7 +1116,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -1050,9 +1138,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -1065,7 +1153,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -1087,9 +1175,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -1102,7 +1190,7 @@
                 <div class="h-100">
 
                   <div class="product-item">
-                    <span class="badge badge-info offer-badge">NEW  </span>
+                    <span class="badge badge-info offer-badge">NEW </span>
                     <div class="product-item-image">
                       <span class="like-icon"><a class="active" href="#"> <i
                             class="icofont icofont-heart"></i></a></span>
@@ -1124,9 +1212,9 @@
                     </div>
                     <div class="product-item-footer">
                       <div class="product-item-size">
-                        
+
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -1134,7 +1222,7 @@
                 </div>
               </div>
             </div>
-    
+
           </div>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
@@ -1320,7 +1408,121 @@
 
   <script src="plugins/owl-carousel/owl.carousel.js" type="text/javascript"></script>
 
+  <script type="text/javascript">
+    function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+      const [from, to] = getParsed(fromInput, toInput);
+      fillSlider(fromInput, toInput, "#C6C6C6", "#733D80", controlSlider);
+      fromSlider.value = from;
 
+      if (from > to) {
+        fromSlider.value = to;
+        fromInput.value = to;
+      } else {
+        fromSlider.value = from;
+      }
+    }
+
+    // Controls the slider using to Input....
+    function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+      const [from, to] = getParsed(fromInput, toInput);
+      fillSlider(fromInput, toInput, "#C6C6C6", "#733D80", controlSlider);
+      setToggleAccessible(toInput);
+      toSlider.value = to;
+      toInput.value = to;
+
+      if (from <= to) {
+        toSlider.value = to;
+        toInput.value = to;
+      } else {
+        toInput.value = from;
+      }
+    }
+
+    // Sliding event of the From slider
+    function controlFromSlider(fromSlider, toSlider, fromInput) {
+      const [from, to] = getParsed(fromSlider, toSlider);
+      console.log([from, to]);
+      fillSlider(fromSlider, toSlider, "#C6C6C6", "#733D80", toSlider);
+      fromInput.value = from;
+      if (from > to) {
+        fromInput.value = to;
+        toInput.value = from;
+      }
+    }
+
+    // Sliding event of the To slider
+    function controlToSlider(fromSlider, toSlider, toInput) {
+      const [from, to] = getParsed(fromSlider, toSlider);
+      fillSlider(fromSlider, toSlider, "#C6C6C6", "#733D80", toSlider);
+      setToggleAccessible(toSlider);
+      toSlider.value = to;
+      toInput.value = to;
+      if (from > to) {
+        fromInput.value = to;
+        toInput.value = from;
+
+         
+      }
+    }
+
+    // Parsign values of the Inputs
+    function getParsed(currentFrom, currentTo) {
+      const from = parseInt(currentFrom.value, 10);
+      const to = parseInt(currentTo.value, 10);
+      return [from, to];
+    }
+
+    // Changing and Filling the color in the selected part...
+    function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+      let rangeDistance = to.max - to.min;
+      let fromPosition = from.value - to.min;
+      let toPosition = to.value - to.min;
+      if (fromPosition > toPosition) {
+        let spare = fromPosition;
+        fromPosition = toPosition;
+        toPosition = spare;
+      }
+      controlSlider.style.background = `linear-gradient(
+              to right,
+              ${sliderColor} 0%,
+              ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
+              ${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
+              ${rangeColor} ${(toPosition / rangeDistance) * 100}%, 
+              ${sliderColor} ${(toPosition / rangeDistance) * 100}%, 
+              ${sliderColor} 100%)`;
+    }
+
+    // Making sure the toggle which we are using is accesible to change the range
+    function setToggleAccessible(currentTarget) {
+      const toSlider = document.querySelector("#toSlider");
+      if (Number(currentTarget.value) <= 0) {
+        toSlider.style.zIndex = 2;
+      } else {
+        toSlider.style.zIndex = 0;
+      }
+    }
+
+    const fromSlider = document.querySelector("#fromSlider");
+    const toSlider = document.querySelector("#toSlider");
+    const fromInput = document.querySelector("#fromInput");
+    const toInput = document.querySelector("#toInput");
+
+    const sfromInput = document.querySelector("#sfromInput");
+    const stoInput = document.querySelector("#stoInput");
+
+    // Initially filling the slider using default values...
+    fillSlider(fromSlider, toSlider, "#C6C6C6", "#733D80", toSlider);
+    setToggleAccessible(toSlider);
+
+    // Assigning listner methonds to respective events.
+    fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+    toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+    fromInput.oninput = () =>
+      controlFromInput(fromSlider, fromInput, toInput, toSlider);
+    toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+
+  </script>
 </body>
 
 <!-- Mirrored from askbootstrap.com/preview/osahan-fashion/shop-grid-left-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 17:54:07 GMT -->
