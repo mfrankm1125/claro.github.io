@@ -326,22 +326,22 @@
         </div>
         <style>
           .top-categories-search {
-            min-width:550px  !important; 
+            min-width: 550px !important;
           }
         </style>
         <div class="my-2 my-lg-0">
           <ul class="list-inline main-nav-right">
 
             <li class="list-inline-item dropdown  ">
-             
-                <select class="form-control  " style="line-height: 1.5;height: auto;padding-bottom: 8px; ">
-                  <option value="1">Sucursal Sucursal </option>
-                  <option value="1">Sucursal Sucursal </option>
-                  <option value="1">Sucursal Sucursal </option>
-                  <option value="1">Sucursal Sucursal </option>
-                </select>
-              
-           
+
+              <select class="form-control  " style="line-height: 1.5;height: auto;padding-bottom: 8px; ">
+                <option value="1">Sucursal Sucursal </option>
+                <option value="1">Sucursal Sucursal </option>
+                <option value="1">Sucursal Sucursal </option>
+                <option value="1">Sucursal Sucursal </option>
+              </select>
+
+
             </li>
             <li class="list-inline-item dropdown osahan-top-dropdown">
               <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
@@ -1247,6 +1247,19 @@
   <section class="hot-offers text-center">
     <div class="container">
       <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <p class="text-center fw-bold  " style="font-size: 1.5rem;color:black;">Bienvenido a tienda virtual "XXXXXXX "</p>
+          <p class="text-center mb-1 " style="font-size: 1rem;margin-bottom: 1rem;">Estamos cargando la información necesaria para que puedas ver nuestros productos...</p>
+          <img style="text-align: center;margin-top: 1rem;width: 5rem;" src="./images/actualizado.png">
+          <br>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="hot-offers text-center">
+    <div class="container">
+      <div class="row">
 
         <div class="col-lg-12 col-md-12 col-sm-12">
           <p class="text-center fw-bold  " style="font-size: 1.5rem;color:black;">Queremos darte lo mejor</p>
@@ -1534,9 +1547,46 @@
     </div>
   </div>
 
-  <button type="button" class="btn btn-danger rounded-circle  btn-floating btn-lg" id="btn-back-to-top">
+  <button type="button" class="btn btn-danger rounded-circle  btn-floating btn-lg" id="btn-back-to-top"
+    style="height: 45px;">
     <i class="fa fa-arrow-up"></i>
   </button>
+
+  <style>
+
+    #btn-back-to-top {
+      right: 20px ;
+      bottom: 80px;
+    }
+
+    .float {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+
+    .float:hover {
+      color: #FFF
+    }
+
+    .my-float {
+      margin-top: 10px;
+    }
+  </style>
+
+  <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+    class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
 
 </body>
 
