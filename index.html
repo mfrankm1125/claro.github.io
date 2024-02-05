@@ -269,12 +269,17 @@
   -->
   <nav class="navbar navbar-light navbar-expand-lg bg-primary bg-faded osahan-menu osahan-menu-top-3  sticky-topv2  ">
     <div class="container">
-      <a class="navbar-brand" href="index.html"> <img src="images/logo-white.png" alt="logo"> </a>
-      <button class="navbar-toggler navbar-toggler-white" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    
+
+      <a class="navbar-brand" href="index.html"> <img src="images/logo-white.png" alt="logo" style="width: 60px;"> </a>
+      <button class="navbar-toggler navbar-toggler-white" type="button" data-toggle="collapse"
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse" id="navbarNavDropdown">
+
+
+      <div class=" collapse navbar-collapse " id="navbarNavDropdown">
         <div class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto top-categories-search-main">
           <div class="top-categories-search">
             <div class="input-group">
@@ -325,16 +330,66 @@
           </ul>
         </div>
         <style>
+
+          @media (min-width: 600px) {
           .top-categories-search {
-            min-width: 550px !important;
+                    min-width: 550px !important;
+                  }           
+         }
+
+        @media (max-width: 576px) {
+
+          .top-categories-search {
+                   margin-bottom: 5px;
+                  }       
+        
+          #sucu {
+            width: 100% !important;
           }
+
+          .usulogin{
+            width: 100% !important;
+          }
+
+          #cartm{
+            width: 100% !important;
+          }
+
+          #ausulogin{
+            margin-top: 5px;
+            width: 100% !important;
+          }
+
+          #ausuperfil{
+            margin-top: 5px;
+            width: 100% !important;
+          }
+
+          #acartm{
+            margin-top: 5px;
+            width: 100% !important;
+          }
+
+          #styleOver{
+            width: 100%;
+          }
+
+          #menuUser{
+            width: 100%;
+          }
+
+        }
+
+
+
+         
         </style>
         <div class="my-2 my-lg-0">
           <ul class="list-inline main-nav-right">
 
-            <li class="list-inline-item dropdown  ">
+            <li class="list-inline-item dropdown  " id="sucu" >
 
-              <select class="form-control  " style="line-height: 1.5;height: auto;padding-bottom: 8px; ">
+              <select class="form-control  "  style="line-height: 1.5;height: auto;padding-bottom: 8px; ">
                 <option value="1">Sucursal Sucursal </option>
                 <option value="1">Sucursal Sucursal </option>
                 <option value="1">Sucursal Sucursal </option>
@@ -343,8 +398,8 @@
 
 
             </li>
-            <li class="list-inline-item dropdown osahan-top-dropdown">
-              <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+            <li class="list-inline-item dropdown osahan-top-dropdown" id="cartm" >
+              <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown" id="acartm"  aria-haspopup="true"
                 aria-expanded="false">
                 <i class="icofont icofont-shopping-cart"></i> Cart <small class="cart-value">02</small>
               </a>
@@ -452,17 +507,17 @@
 
             </li>
 
-            <li class="list-inline-item d-none">
-              <a class="btn btn-danger" data-toggle="modal" data-target="#bd-example-modal" href="#"><i
+            <li class="list-inline-item d-none usulogin "   >
+              <a class="btn btn-danger" data-toggle="modal" id="ausulogin" data-target="#bd-example-modal" href="#"><i
                   class="icofont icofont-ui-user"></i> Sign In</a>
             </li>
 
 
-            <li class="list-inline-item dropdown   osahan-top-dropdown">
-              <a class="btn btn-danger dropdown-toggle  " href="#" data-toggle="dropdown" aria-haspopup="true"
+            <li class="list-inline-item dropdown  usulogin  osahan-top-dropdown">
+              <a class="btn btn-danger dropdown-toggle  " id="ausuperfil" href="#" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <i class="icofont icofont-ui-user"></i> LLaker </a>
-              <div class="dropdown-menu dropdown-menu-left    ">
+              <div class="dropdown-menu dropdown-menu-left    " id="menuUser">
 
                 <div class="dropdown-item">
                   <a href=""> <i class="fa fa-user"></i> Mi perfilx </a>
@@ -1454,10 +1509,9 @@
 
 
   <script src="plugins/owl-carousel/owl.carousel.js" type="text/javascript"></script>
-  <script src="js/rocket-loader.min.js" data-cf-settings="90c5de628179a35087670abc-|49" defer></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
-    integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-    data-cf-beacon='{"rayId":"822facf2cb2a9543","version":"2023.10.0","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+  <script src="js/rocket-loader.min.js"  defer></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"    
+    
     crossorigin="anonymous"></script>
 
   <script type="text/javascript">
